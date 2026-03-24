@@ -1,1 +1,176 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Weather App</title>
+    <link rel="stylesheet" href="weather1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  </head>
+<body>
+
+    
+
+
+<!-- ================= HOME PAGE ================= -->
+ <div id="home" class="page active">
+
+  <div class="weather-top">
+    <h2 id="greeting"></h2>
+<p id="date"></p>
+    <h2 id="city">City</h2>
+    <div class="temp" id="temp">--°C</div>
+    <div id="condition">Condition</div>
+  </div>
+  <div class="weather-panel" id="weatherPanel">
+
+   
+
+
+
+  <div class="weather-icon">
+    <img id="icon" src="">
+  </div>
+
+  <div class="stats">
+    <div class="card"><strong>Humidity</strong><br><b id="humidity"></b></div>
+    <div class="card"><strong>Wind</strong><br><b id="wind"></b></div>
+    <div class="card"><strong>Pressure</strong><br><b id="pressure"></b></div>
+    <div class="card"><strong>Sunrise</strong><br><b id="sunrise"></b></div>
+  </div>
+
+  <!-- OTHER CITIES -->
+    <h3>Weather in other cities</h3>
+   
+    
+     <div class="search-box">
+
+  <input 
+    type="text" 
+    id="cityInput" 
+    placeholder="Search city weather..."
+    class="search"
+  >
+
+  <button onclick="searchCity()" class="send-btn">
+    <i>search</i> 
+  </button>
+
+ </div>
+ <div class="city-card" onclick="selectCity('London')">GB London — 27°C ☀️</div>
+<div class="city-card" onclick="selectCity('Sydney')">AU Sydney — 21°C ☁️</div>
+<div class="city-card" onclick="selectCity('Dubai')">AE Dubai — 38°C ☀️</div>
+<div class="city-card" onclick="selectCity('Texas')">US Texas — 12°C ⛈️</div>
+<div class="city-card" onclick="selectCity('Toronto')">CA Toronto — 16°C 🌧️</div>
+  </div> 
+</div>
+</div>
+
+</div>
+
+<!-- ================= FORECAST PAGE ================= -->
+<div id="forecast" class="page">
+
+  <h2>Hourly Forecast</h2>
+
+<section class="hourly" id="hourlyForecast">
+
+<div class="hour-card">Loading...</div>
+
+</section>
+
+
+<h2>Weekly Forecast</h2>
+
+<section class="hourly" id="weeklyForecast">
+
+<div class="hour-card">Loading...</div>
+
+</section>
+  <div id="forecastList"></div>
+</div> 
+
+<!-- ================= AI PAGE ================= -->
+ <div id="ai" class="page">
+
+<h2>Weather AI</h2>
+
+<div class="ai-chat" id="aiChat">
+
+<div class="ai-message">
+Ask me anything about weather 🌦
+</div>
+
+</div>
+
+<div class="ai-input-box">
+ 
+
+<input
+ type="text"
+ id="aiInput"
+ placeholder="Ask about weather..."
+>
+
+<button onclick="askAI()" class="send-btn">
+<i class="fas fa-paper-plane">send</i>
+</button>
+
+</div>
+
+</div>
+ <img id="seasonImage" class="clickable-img">
+<!-- ================= SEASONS PAGE ================= -->
+<div id="seasons" class="page">
+
+  <div class="season-container" id="seasonContainer">
+    <h2 id="seasonName"></h2>
+  </div>
+
+  <div class="season-card">
+    <h2 id="seasonTitle"></h2>
+    <p id="seasonDescription"></p>
+  </div>
+ 
+</div>
+<!-- ================= NAVIGATION ================= -->
+<div class="nav">
+
+  <div class="nav-item active" onclick="showTab('home', this)">
+    <i class="fa-solid fa-house"></i>
+    <span>Home</span>
+  </div>
+
+  <div class="nav-item" onclick="showTab('forecast', this)">
+    <i class="fa-solid fa-cloud-sun"></i>
+    <span>Forecast</span>
+  </div>
+
+  <div class="nav-item" onclick="showTab('ai', this)">
+    <i class="fa-solid fa-robot"></i>
+    <span>AI</span>
+  </div>
+
+  <div class="nav-item" onclick="showTab('seasons', this)">
+    <i class="fa-solid fa-leaf"></i>
+    <span>Seasons</span>
+  </div>
+
+ 
+
+</div>
+<!-- FULLSCREEN IMAGE VIEWER -->
+<div class="image-viewer" id="ImageViewer">
+    <span id="closeViewer">&times;</span>
+    <img id="ViewerImage" src="">
+    <a id="downloadBtn" download>Download</a>
+</div>
+
+<script src="weather1.js"></script>
+</body>
+</html>
