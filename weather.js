@@ -279,19 +279,19 @@ async function getSeasonAnswer(seasonQuery, chat){
     const seasonInfo = {
         winter: {
             text: "Winter is the coldest part of the year. During this season, temperatures drop significantly in many regions, and some countries experience beautiful snowfall.",
-            images: ["seasons/winter1.jpeg","seasons/winter2.jpeg","seasons/winter3.jpeg","seasons/winter4.jpeg"]
+            images: ["winter1.jpeg","winter2.jpeg","winter3.jpeg","winter4.jpeg"]
         },
         spring: {
             text: "Spring is a season of renewal and growth. Flowers bloom, trees regain their leaves, and the weather becomes warmer and pleasant.",
-            images: ["seasons/spring1.jpeg","seasons/spring2.jpeg","seasons/spring3.jpeg","seasons/spring4.jpeg"]
+            images: ["spring1.jpeg","spring2.jpeg","spring3.jpeg","spring4.jpeg"]
         },
         summer: {
             text: "Summer is the hottest season of the year. Days are long and sunny, perfect for outdoor activities and vacations.",
-            images: ["seasons/summer1.jpeg","seasons/summer2.jpeg","seasons/summer3.jpeg","seasons/summer4.jpeg"]
+            images: ["summer1.jpeg","summer2.jpeg","summer3.jpeg","summer4.jpeg"]
         },
         autumn: {
             text: "Autumn, or fall, is when leaves change color and fall from trees. The weather cools down, and it's a season of harvest and beauty.",
-            images: ["seasons/autumn1.jpeg","seasons/autumn2.jpeg","seasons/autumn3.jpeg","seasons/autumn4.jpeg"]
+            images: ["autumn1.jpeg","autumn2.jpeg","autumn3.jpeg","autumn4.jpeg"]
         }
     };
 
@@ -374,31 +374,31 @@ SEASONS
 const seasonImages = {
 
     winter:[
-        "seasons/winter1.jpeg",
-        "seasons/winter2.jpeg",
-        "seasons/winter3.jpeg",
-        "seasons/winter4.jpeg"
+        "winter1.jpeg",
+        "winter2.jpeg",
+        "winter3.jpeg",
+        "winter4.jpeg"
     ],
 
     spring:[
-        "seasons/spring1.jpeg",
-        "seasons/spring2.jpeg",
-        "seasons/spring3.jpeg",
-        "seasons/spring4.jpeg"
+        "spring1.jpeg",
+        "spring2.jpeg",
+        "spring3.jpeg",
+        "spring4.jpeg"
     ],
 
     summer:[
-        "seasons/summer1.jpeg",
-        "seasons/summer2.jpeg",
-        "seasons/summer3.jpeg",
-        "seasons/summer4.jpeg"
+        "summer1.jpeg",
+        "summer2.jpeg",
+        "summer3.jpeg",
+        "summer4.jpeg"
     ],
 
     autumn:[
-        "seasons/autumn1.jpeg",
-        "seasons/autumn2.jpeg",
-        "seasons/autumn3.jpeg",
-        "seasons/autumn4.jpeg"
+        "autumn1.jpeg",
+        "autumn2.jpeg",
+        "autumn3.jpeg",
+        "autumn4.jpeg"
     ]
 };
 
