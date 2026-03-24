@@ -119,12 +119,12 @@ font-size:12px;
 /* SEASONS */
 .season-container{
  
-width:80%;
+width:70%;
 max-width:500px;
 
-height:350px;
+height:60%;
 
-margin:30px auto;
+margin:auto;
 
 border-radius:20px;
 
@@ -132,7 +132,7 @@ background-size:cover;
 background-position:center;
 
 display:flex;
-align-items:flex-end;
+
 justify-content:center;
 
 padding:20px;
