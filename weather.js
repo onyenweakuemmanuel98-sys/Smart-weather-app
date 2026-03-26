@@ -308,7 +308,7 @@ async function getSeasonAnswer(seasonQuery, chat){
             const container = document.createElement("div");
             container.className = "ai-images-container";
 
-            for(let i=0; i<2; i++){
+            for(let i=0; i<1; i++){
                 const img = document.createElement("img");
                 img.src = info.images[i];
                 img.classList.add("clickable-img");
