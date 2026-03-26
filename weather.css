@@ -3,10 +3,11 @@
 body{
   margin:0;
   font-family:Segoe UI;
-  background:url(universe2.jpg) no-repeat;
+  background:url(universe2.jpg);
   background-size: cover;
   background-position: center;
   color:white;
+  align-items: center;
 }
 
 /* NAVIGATION */
@@ -57,6 +58,12 @@ font-size:12px;
   display:none;
   padding:20px;
   padding-bottom:90px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.page h2 {
+  position: relative;
 }
 
 
@@ -97,6 +104,7 @@ font-size:12px;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
+  width: 100%;
 }
 
 .card{
@@ -107,15 +115,16 @@ font-size:12px;
   height: 50px;
 }
 
+
 /* FORECAST */
 #forecastList .day{
   display:grid;
   grid-template-columns:1fr 1fr;
   justify-content:space-between;
   padding:12px 0;
+  align-self: center;
   border-bottom:1px solid rgba(255,255,255,0.1);
 }
-
 
 .city-card {
   margin: 8px 0;
@@ -150,7 +159,8 @@ input.search {
   gap: 12px;
   overflow-x: auto;
   padding: 0 16px;
- align-items: center;
+  align-items: center;
+  width: 100%;
 }
 
 .hour-card {
@@ -168,6 +178,32 @@ input.search {
 
 .hour-card img{
   width:35px;
+}
+@media screen and (max-width: 600px) {
+
+  .hourly {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 30px;
+    padding: auto;
+    overflow: hidden; /* remove scroll */
+  }
+
+  .hour-card {
+    width: 70%;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .hour-card img {
+    width: 28px;
+  }
+
+}
+.hour-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
 }
 .search-box{
   display:flex;
@@ -192,6 +228,12 @@ input.search {
   height:60vh;
   overflow-y:auto;
   padding:10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: 1;
 }
 
 .ai-message{
@@ -253,17 +295,17 @@ display:none;
 }
 .season-container{
 
-height:100vh;
-width:80%;
+height: 100vh;
+width:100%;
 
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 
 display:flex;
-align-items:center;
-justify-content:center;
 
+justify-content:center;
+border-radius: 10px;
 color:white;
 font-size:40px;
 font-weight:bold;
@@ -389,7 +431,6 @@ animation-delay: 0.4s;
 /* Container for AI season images (side by side) */
 .ai-images-container {
     display: flex;
-    gap: 10px;
     margin-top: 8px;
 }
 
@@ -398,19 +439,36 @@ animation-delay: 0.4s;
     height: 80px;
     object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 /* AI weather card */
-.ai-weather-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background-color: #1d3444;
-    padding: 10px 14px;
-    border-radius: 12px;
-    margin: 8px 0;
-    max-width: 300px;
+
+  .ai-weather-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 16px;
+  color: #fff;
+  width: 70%;
 }
+
+/* Background image layer */
+.ai-weather-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:rgba(225, 225, 225, 0.1);
+  z-index: 0;
+  backdrop-filter: blur(10px);
+}
+
+/* Content stays above */
+.ai-weather-card * {
+  position: relative;
+  z-index: 1;
+}
+
 
 .ai-weather-card img {
     width: 60px;
@@ -486,16 +544,4 @@ animation-delay: 0.4s;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-}
-
-.clickable-img {
-    cursor: pointer;
-}
-.ai-chat {
-    height: 60vh;
-    overflow-y: auto;
-    padding: 10px;
-
-    display: flex;
-    flex-direction: column;
 }
