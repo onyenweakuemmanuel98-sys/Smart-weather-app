@@ -3,7 +3,7 @@
 body{
   margin:0;
   font-family:Segoe UI;
-  background:url(universe2.jpg);
+  background:url(universe2.jpg) no-repeat center center/cover;
   background-size: cover;
   background-position: center;
   color:white;
